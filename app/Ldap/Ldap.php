@@ -6,7 +6,7 @@ class Ldap {
 
     private static function getConnection() {
 
-        $ldap_host= "10.200.0.5";
+        $ldap_host= "10.200.x.x";
         $ldap_port = 389;
 
         $conn = @ldap_connect($ldap_host, $ldap_port)
@@ -18,7 +18,7 @@ class Ldap {
     }
 
     public static function authenticate($username, $password) {
-        $dom = "SAUDE";
+        $dom = "DOM";
         $conn = self::getConnection();
 
         $fullUsername = $dom."\\".$username;
